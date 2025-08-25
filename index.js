@@ -24,7 +24,7 @@ app.get("/check_link", async (req, res) => {
       .status(400)
       .json({ is_link_valid: false, error: "link query param required" });
 
-  // 2.5s timeout
+  // 2.5s timeoutt
   const controller = new AbortController();
   const timer = setTimeout(() => controller.abort(), 2500);
 
