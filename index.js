@@ -38,9 +38,9 @@ app.get("/check_link", async (req, res) => {
     console.log("Link requested: " + link);
 
     const html = await resp.text();
-      console.log(html.slice(0, 100)); // raw HTML (can be large)
+      // console.log(html.slice(0, 100)); // raw HTML (can be large)
       
-      console.log("\n\n\n" + resp.url)
+      // console.log("\n\n\n" + resp.url)
 
       // const isOk = resp.status >= 200 && resp.status < 400 && html.length > 0;
       
