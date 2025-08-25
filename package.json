@@ -1,0 +1,24 @@
+{
+  "name": "printpronto-chatbot-test-test_link",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Max77788/test_link_validity_printpronto.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Max77788/test_link_validity_printpronto/issues"
+  },
+  "homepage": "https://github.com/Max77788/test_link_validity_printpronto#readme",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^5.1.0"
+  }
+}
