@@ -46,6 +46,8 @@ app.get("/check_link", async (req, res) => {
       
       const isOk = resp.url === link;
 
+      console.log("Link is valid: " + isOk);
+
     res.json({ is_link_valid: isOk });
   } catch (err) {
     res.json({ is_link_valid: false });
