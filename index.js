@@ -35,6 +35,8 @@ app.get("/check_link", async (req, res) => {
       signal: controller.signal,
     });
 
+    console.log("Link requested: " + link);
+
     const html = await resp.text();
       console.log(html.slice(0, 100)); // raw HTML (can be large)
       
