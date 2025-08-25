@@ -1,7 +1,17 @@
 from fastapi import FastAPI, Query
+from fastapi.middleware.cors import CORSMiddleware
 import httpx
 
 app = FastAPI()
+
+# Allow calls from Voiceflow, localhost, etc. (tighten as needed)
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=["*"],
+    allow_credentials=True,
+    allow_methods=["GET"],
+    allow_headers=["*"],
+)
 
 @app.get("/check_link")
 async def check_link(link: str = Query(..., description="Link to validate")):
