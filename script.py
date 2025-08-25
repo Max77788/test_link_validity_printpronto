@@ -13,6 +13,10 @@ app.add_middleware(
     allow_headers=["*"],
 )
 
+@app.get("/ping")
+async def ping():
+    return {"ok": True}
+
 @app.get("/check_link")
 async def check_link(link: str = Query(..., description="Link to validate")):
     try:
