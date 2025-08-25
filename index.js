@@ -44,7 +44,7 @@ app.get("/check_link", async (req, res) => {
 
       // const isOk = resp.status >= 200 && resp.status < 400 && html.length > 0;
       
-      const isOk = resp.url.endsWith(".html");
+      const isOk = resp.url.trim().endsWith(".html");
 
     console.log("Link is valid: " + isOk);
     
