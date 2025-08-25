@@ -40,11 +40,11 @@ app.get("/check_link", async (req, res) => {
     const html = await resp.text();
       // console.log(html.slice(0, 100)); // raw HTML (can be large)
       
-      // console.log("\n\n\n" + resp.url)
+      console.log("\n\n\nFinal URL: " + resp.url)
 
       // const isOk = resp.status >= 200 && resp.status < 400 && html.length > 0;
       
-      const isOk = resp.url === link;
+      const isOk = resp.url.endsWith(".html");
 
     console.log("Link is valid: " + isOk);
     
