@@ -42,7 +42,7 @@ app.get("/check_link", async (req, res) => {
 
       // const isOk = resp.status >= 200 && resp.status < 400 && html.length > 0;
       
-      const isOk = resp.url.includes("html");
+      const isOk = resp.url === link;
 
     res.json({ is_link_valid: isOk });
   } catch (err) {
