@@ -26,7 +26,7 @@ app.get("/check_link", async (req, res) => {
 
   // 2.5s timeoutt
   const controller = new AbortController();
-  const timer = setTimeout(() => controller.abort(), 2500);
+  const timer = setTimeout(() => controller.abort(), 1000);
 
   try {
     const resp = await fetch(link, {
